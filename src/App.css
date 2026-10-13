@@ -1,0 +1,88 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f6ff;
+}
+
+/* Sidebar sebelah kiri */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 28px 18px;
+  background: #efecff;
+  border-right: 1px solid #e4dfff;
+}
+
+.brand h2 {
+  margin: 0;
+  color: #5540b7;
+  font-size: 28px;
+}
+
+.brand p {
+  margin: 6px 0 32px;
+  color: #77718f;
+  font-size: 12px;
+}
+
+/* Menu navigasi */
+.sidebar-menu {
+  display: grid;
+  gap: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #35304f;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu:hover {
+  background: #e3ddff;
+}
+
+.menu.active {
+  background: #7660e8;
+  color: white;
+}
+
+/* Konten sebelah kanan */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+.main-content h1 {
+  margin-top: 0;
+  color: #29234c;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 150px;
+    padding: 18px 10px;
+  }
+
+  .main-content {
+    padding: 20px 14px;
+  }
+
+  .brand p {
+    font-size: 10px;
+  }
+}
