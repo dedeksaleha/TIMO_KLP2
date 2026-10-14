@@ -53,8 +53,6 @@ docker run -d --name timo-uts -p 8080:80 timo-klp2:submit-UTS
 
 Buka aplikasi di `http://localhost:8080`.
 
-**Docker Hub:** Link akan ditambahkan setelah image final di-push.
-
 ## Anggota Kelompok
 
 | Anggota | Kontribusi |
@@ -66,5 +64,6 @@ Buka aplikasi di `http://localhost:8080`.
 ## Repository
 
 **GitHub:** https://github.com/dedeksaleha/TIMO_KLP2
+**Docker Hub**: https://hub.docker.com/r/hanihuriyah/timo-klp2
 
 **Status:** Pengembangan frontend untuk UTS POPL. Integrasi data antarf fitur dan backend direncanakan untuk pengembangan selanjutnya.
