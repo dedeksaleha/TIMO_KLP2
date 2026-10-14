@@ -1,16 +1,70 @@
-# React + Vite
+# TIMO — Time Management Organizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TIMO adalah aplikasi web untuk membantu mahasiswa mengelola tugas, pengingat, dan jadwal kegiatan akademik secara lebih terorganisir.
 
-Currently, two official plugins are available:
+Project ini dikembangkan oleh **Kelompok 2** untuk memenuhi tugas **UTS Praktikum Pengembangan dan Operasi Perangkat Lunak (POPL)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fitur Utama
 
-## React Compiler
+- **Dashboard:** Menampilkan ringkasan aktivitas akademik pengguna.
+- **Reminder:** Membantu pengguna mengelola tugas dan pengingat.
+- **Schedule:** Menampilkan jadwal akademik melalui kalender mingguan, kalender mini, dan Upcoming Events.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Teknologi
 
-## Expanding the ESLint configuration
+- **Frontend:** React, Vite, JavaScript, CSS
+- **Library:** Lucide React
+- **Version Control:** Git dan GitHub
+- **Containerization:** Docker dan Nginx
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Design Pattern
+
+Project menerapkan **Container–Presenter Pattern** pada halaman Schedule untuk memisahkan logika aplikasi dan tampilan.
+
+- `ScheduleContainer.jsx`: Mengelola state, data, dan navigasi kalender.
+- `ScheduleView.jsx`: Menampilkan antarmuka kalender dan kegiatan.
+
+## Cara Menjalankan
+
+Clone repository dan instal dependency:
+
+```bash
+git clone https://github.com/dedeksaleha/TIMO_KLP2.git
+cd TIMO_KLP2
+npm install
+npm run dev
+```
+
+Buka alamat yang ditampilkan Vite, biasanya `http://localhost:5173`.
+
+## Docker
+
+Build image:
+
+```bash
+docker build -t timo-klp2:submit-UTS .
+```
+
+Jalankan container:
+
+```bash
+docker run -d --name timo-uts -p 8080:80 timo-klp2:submit-UTS
+```
+
+Buka aplikasi di `http://localhost:8080`.
+
+**Docker Hub:** Link akan ditambahkan setelah image final di-push.
+
+## Anggota Kelompok
+
+| Anggota | Kontribusi |
+|---|---|
+| Dedek Saleha       | Dashboard                     |
+| Dara Ramadhani     | Reminder                      |
+| Hani Huriyah Ahmad | Schedule dan pengujian Docker |
+
+## Repository
+
+**GitHub:** https://github.com/dedeksaleha/TIMO_KLP2
+
+**Status:** Pengembangan frontend untuk UTS POPL. Integrasi data antarf fitur dan backend direncanakan untuk pengembangan selanjutnya.
