@@ -1,3 +1,5 @@
+import ScheduleContainer from "./schedule/ScheduleContainer";
+
 export default function Schedule() {
-  return <h1>Jadwal Akademik</h1>;
+  return <ScheduleContainer />;
 }
